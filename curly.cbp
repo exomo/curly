@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="curly" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="lib/curlyd" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add directory="../../libraries/curl-7.34.0-devel-mingw32/include" />
+				</Compiler>
+				<Linker>
+					<Add directory="../../libraries/curl-7.34.0-devel-mingw32/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="lib/curly" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add directory="../../libraries/curl-7.34.0-devel-mingw32/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Weffc++" />
+			<Add option="-Wmain" />
+			<Add option="-Wzero-as-null-pointer-constant" />
+			<Add option="-std=c++11" />
+			<Add option="-Wextra" />
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="curly.cpp" />
+		<Unit filename="curly.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
